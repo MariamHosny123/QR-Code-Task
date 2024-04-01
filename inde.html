@@ -24,40 +24,68 @@
     <div class="container-fluid mt-0 second-color">
         <div class="container  text-center">
             <label for="qrText" class="h1 col-6">Enter your Text or URL : </label>
-            <input type="text" class="h1 col-6 rounded-4 bg-dark" name="qrText" id="qrText" placeholder="Type Here ">
+            <input type="text" class="h1 col-6 rounded-4 bg-dark text-white mb-4 text-center" name="qrText" id="qrText" placeholder="Type Here ">
             <br>
-            <button class="col-2 btn btn-dark btn-lg btn-outline-light rounded-4" onclick="generateQRCode()">Generate QR Code </button>
+            <button class="col-2 btn btn-dark btn-lg btn-outline-light rounded-4 mb-4" onclick="generateQRCode()">Generate QR Code </button>
+            
+            <!-- Create a download button -->
+            <a id="downloadLink" download="qr_code_image.png">
+                <button id="downloadButton" class="col-2 btn btn-dark btn-lg btn-outline-light rounded-4 mb-4">Download QR Code</button>
+            </a>
+
+            <!-- Create a WhatsApp share button -->
+            <button class="col-2 btn btn-dark btn-lg btn-outline-light rounded-4 mb-4" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
             <div class="container" id="imgBox">
                 <img src="" id="qrImg">
             </div>
         </div>
 
-        <!-- Create a download button -->
-        <a href="path/to/your/qr_code_image.png" download="qr_code_image.png">
-            <button>Download QR Code</button>
-        </a>
-
-        <!-- Create a WhatsApp share button -->
-        <button onclick="shareOnWhatsApp()">Share on WhatsApp</button>
 
     </div>
-
-    <script>
-        function shareOnWhatsApp() {
-            // Get the URL of the QR code image
-            var qrCodeUrl = "path/to/your/qr_code_image.png";
-            
-            // Encode the QR code URL
-            var encodedUrl = encodeURIComponent(qrCodeUrl);
-            
-            // Construct the WhatsApp share URL
-            var whatsappShareUrl = "https://wa.me/?text=" + encodedUrl;
-            
-            // Open the WhatsApp share URL in a new tab
-            window.open(whatsappShareUrl, '_blank');
-        }
-    </script>
-
+    <footer class="text-center bg-body-tertiary">
+        <!-- Grid container -->
+        <div class="container pt-4 ">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="https://www.facebook.com/mariam.hosny.5688"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f "></i
+            ></a>
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="https://www.linkedin.com/in/mariam-hosny-b438a019b"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="https://github.com/MariamHosny123"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center h3 p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2024 Copyright: Mariam Hosny 
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
     <script src="assets/js/main.js"></script>
 </body>
 </html>
